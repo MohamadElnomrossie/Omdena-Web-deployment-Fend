@@ -2,10 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 export default function Navbar() {
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="sticky-top">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <h3 className="navbar-brand">Yarub</h3>
+          <h3 className="navbar-brand  text-warning">Yarub</h3>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,9 +22,9 @@ export default function Navbar() {
               <li className="nav-item">
                 {/* <NavLink className="nav-link" aria-current="page" to="/">Home</NavLink> */}
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown ">
                 <label
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle  text-warning"
                   id="navbarScrollingDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -33,72 +33,64 @@ export default function Navbar() {
                   Tasks
                 </label>
                 <ul
-                  className="dropdown-menu"
+                  className="dropdown-menu bg-dark  text-warning"
                   aria-labelledby="navbarScrollingDropdown"
                 >
                   
                  
-                  <li>
-                    <NavLink className="nav-link" to="/dialect">
+                  <li className=" text-warning">
+                    <NavLink className="nav-link bg-dark text-warning" to="/dialect">
                       Dialect Identification
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link" to="/tokenization">
+                    <NavLink className="nav-link bg-dark  text-warning" to="/tokenization">
                       Tokenization
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link" to="/lemmatization">
+                    <NavLink className="nav-link bg-dark  text-warning" to="/lemmatization">
                       Lemmatization
                     </NavLink>
                   </li>
+                  
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <NavLink className="nav-link" to="/ner">
+                    <NavLink className="nav-link bg-dark text-warning" to="/ner">
                       Named Entity Recognition
                     </NavLink>
                   </li>
+                  {/* <li className='bg-dark'>
+                    <hr className="dropdown-divider   bg-dark" />
+                  </li> */}
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <NavLink className="nav-link" to="/pos">
+                    <NavLink className="nav-link bg-dark text-warning" to="/pos">
                       Part of Speech Tagging
                     </NavLink>
                   </li>
+                  {/* <li>
+                    <hr className="dropdown-divider   bg-dark" />
+                  </li> */}
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <NavLink className="nav-link" to="/sentiment">
+                    <NavLink className="nav-link bg-dark text-warning" to="/sentiment">
                       Sentiment Analysis
                     </NavLink>
                   </li>
                   <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <NavLink className="nav-link" to="/similar">
+                    <NavLink className="nav-link bg-dark text-warning" to="/similar">
                       Similar words
                     </NavLink>
                   </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
+                  {/* <li className='bg-dark'>
+                    <hr className="dropdown-divider   bg-dark" />
+                  </li> */}
                 </ul>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/lemmatization">
+              <li className="nav-item bg-dark">
+                <NavLink className="nav-link text-warning" to="/#aboutUs">
                   About us
                 </NavLink>
               </li>
-              <li className="nav-item">
+              <li className="nav-item  bg-dark">
                 <a
                   className="nav-link disabled"
                   href="#"
@@ -107,6 +99,37 @@ export default function Navbar() {
                 >
                   Testimonials
                 </a>
+              </li>
+              <li className="nav-item dropdown ">
+                <label
+                  className="nav-link dropdown-toggle  text-warning"
+                  id="navbarScrollingDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Developers
+                </label>
+                <ul
+                  className="dropdown-menu bg-dark  text-warning"
+                  aria-labelledby="navbarScrollingDropdown"
+                >                 
+                  <li>
+                    <a className="nav-link bg-dark text-warning" href="https://pypi.org/project/yarub/">
+                      Yarub dataset
+                    </a>
+                  </li>
+
+                  <li>
+                    <NavLink className="nav-link bg-dark text-warning" to="#">
+                      Yarub module
+                    </NavLink>
+                  </li>
+                  
+                  {/* <li className='bg-dark'>
+                    <hr className="dropdown-divider   bg-dark" />
+                  </li> */}
+                </ul>
               </li>
             </ul>
           </div>

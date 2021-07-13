@@ -8,7 +8,6 @@ import "../node_modules/bootstrap/dist/js/bootstrap"
 
 
 import {BrowserRouter} from 'react-router-dom'
-document.title='Yarub'
 
 ReactDOM.render(
   <BrowserRouter>

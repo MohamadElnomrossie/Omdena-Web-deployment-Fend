@@ -1,7 +1,11 @@
+@font-face{
+font-family:"test-font";
+src:url('fonts/IndieFlower-Regular.ttf')
+}
 .App {
   text-align: center;
+  scroll-behavior: smooth;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,6 +27,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+/* .sss{
+  height: 400;
+} */
 
 .App-link {
   color: #61dafb;
@@ -35,4 +42,51 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-background{
+  background-image: url("images/bg-main.jpg");
+
+}
+
+Link h5{
+  text-decoration: none;
+  color: #000
+}
+/* .card-text-edited{
+  color: #fff;
+  text-decoration: none;
+  
+} */
+.card-link ,.card-link:hover{
+  color: #000;
+  text-decoration: none;
+}
+.men{
+  color:red;
+}
+.about{
+  text-align: justify;
+  /* text-justify: inter-word; */
+  
+}
+
+.avatar{
+  border-radius:50%;
+  height:50px
+}
+.test-avatar{
+  border-radius:50%;
+  height:150px;
+}
+.test-text{
+  font-family: 'test-font';
+}
+
+.menu-text{
+  color:#BDA575
+}
+
+.test-font-title{
+  color:#BDA575
 }

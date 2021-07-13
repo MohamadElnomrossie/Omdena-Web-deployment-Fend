@@ -10,9 +10,6 @@ import Dialect from "./components/Dialect"
 import LEM from "./components/lemma"
 import Tokenization from "./components/tokenization"
 import Similar from "./components/similarWords"
-import Home from "./components/home"
-
-
 class App extends Component {
   state={sentiment:{'positive':0,'mixed':0,'negative':0},
   NER:{"man":"nadasd","dsds":"OOS"},
@@ -161,13 +158,24 @@ Similar:{}}
      console.log(e)
    }
   }
+requestOptions=(text)=>{return{
+    method: 'POST',
+    mode: 'cors', 
+    cache: 'no-cache', 
+    // credentials: 'same-origin',
+    headers: {
+      //'Content-Type': 'application/json'
+       'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify({text}) // body data type must match "Content-Type" header
+  }
+}
 
   render(){
     return (
-      <div className="App main-background">
-        <header className='container-fluid px-0'>
-          <img className="col-12 mx-0" src="images/header.png" alt=""></img>
-        </header>
+      <div className="App">
         <Navbar />
         <Switch>
         <Route  path="/lemmatization" render={()=>(<LEM 
@@ -210,8 +218,8 @@ Similar:{}}
           task={'sim'}
           output={this.state.Similar}
         handleTasks={this.handleTasks}/>)}/>
-        <Route path="/" exact render={()=>(<Home/>)}/>
-        <Redirect to="/"/>
+        <Route path="/" exact render={()=>(<Input name={'Lemmatization'} task={'lem'}/>)}/>
+        <Redirect to="/lemmatization"/>
         </Switch>
       </div>
     );

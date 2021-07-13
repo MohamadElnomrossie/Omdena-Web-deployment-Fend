@@ -23,6 +23,7 @@ export default function Table(props) {
                 <td>
                   <span>{entry[1]}</span>
                 </td>
+                {}
               </tr>
             );
           })}
