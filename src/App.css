@@ -73,7 +73,7 @@ Link h5{
 
 .avatar{
   border-radius:50%;
-  height:50px
+  height:75px;
 }
 .test-avatar{
   border-radius:50%;
@@ -88,5 +88,14 @@ Link h5{
 }
 
 .test-font-title{
-  color:#BDA575
+  color:#BDA575;
+  text-align: justify;
+}
+
+.line {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 3px solid #000;
+  color:#000
 }

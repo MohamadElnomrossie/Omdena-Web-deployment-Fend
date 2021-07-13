@@ -86,20 +86,26 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item bg-dark">
-                <NavLink className="nav-link text-warning" to="/#aboutUs">
+                <a className="nav-link text-warning" href="/#aboutUs">
                   About us
-                </NavLink>
+                </a>
               </li>
               <li className="nav-item  bg-dark">
                 <a
-                  className="nav-link disabled"
-                  href="#"
+                  className="nav-link text-warning"
+                  href="/#testimonials"
                   tabIndex="-1"
                   aria-disabled="true"
                 >
                   Testimonials
                 </a>
               </li>
+
+ <li>
+                    <a className="nav-link bg-dark text-warning" href="/#contributors">
+                      Contributors
+                    </a>
+                  </li>
               <li className="nav-item dropdown ">
                 <label
                   className="nav-link dropdown-toggle  text-warning"
@@ -125,6 +131,8 @@ export default function Navbar() {
                       Yarub module
                     </NavLink>
                   </li>
+
+                 
                   
                   {/* <li className='bg-dark'>
                     <hr className="dropdown-divider   bg-dark" />
