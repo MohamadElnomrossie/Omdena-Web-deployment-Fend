@@ -7,6 +7,8 @@ export default function CarouselButton(props) {
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to={props.index}
                 aria-label={props.slideName}
+                className={props.className}
+                 aria-current={props["aria-current"]}
               ></button>
     )
 }

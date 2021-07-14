@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="sticky-top">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <h3 className="navbar-brand  text-warning">Yarub</h3>
+          <h3 className="navbar-brand  menu-text">Yarub</h3>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,7 +24,7 @@ export default function Navbar() {
               </li>
               <li className="nav-item dropdown ">
                 <label
-                  className="nav-link dropdown-toggle  text-warning"
+                  className="nav-link dropdown-toggle  menu-text"
                   id="navbarScrollingDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -33,29 +33,29 @@ export default function Navbar() {
                   Tasks
                 </label>
                 <ul
-                  className="dropdown-menu bg-dark  text-warning"
+                  className="dropdown-menu bg-dark  menu-text"
                   aria-labelledby="navbarScrollingDropdown"
                 >
                   
                  
-                  <li className=" text-warning">
-                    <NavLink className="nav-link bg-dark text-warning" to="/dialect">
+                  <li className=" menu-text">
+                    <NavLink className="nav-link bg-dark menu-text" to="/dialect">
                       Dialect Identification
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link bg-dark  text-warning" to="/tokenization">
+                    <NavLink className="nav-link bg-dark  menu-text" to="/tokenization">
                       Tokenization
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link bg-dark  text-warning" to="/lemmatization">
+                    <NavLink className="nav-link bg-dark  menu-text" to="/lemmatization">
                       Lemmatization
                     </NavLink>
                   </li>
                   
                   <li>
-                    <NavLink className="nav-link bg-dark text-warning" to="/ner">
+                    <NavLink className="nav-link bg-dark menu-text" to="/ner">
                       Named Entity Recognition
                     </NavLink>
                   </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
                     <hr className="dropdown-divider   bg-dark" />
                   </li> */}
                   <li>
-                    <NavLink className="nav-link bg-dark text-warning" to="/pos">
+                    <NavLink className="nav-link bg-dark menu-text" to="/pos">
                       Part of Speech Tagging
                     </NavLink>
                   </li>
@@ -71,12 +71,12 @@ export default function Navbar() {
                     <hr className="dropdown-divider   bg-dark" />
                   </li> */}
                   <li>
-                    <NavLink className="nav-link bg-dark text-warning" to="/sentiment">
+                    <NavLink className="nav-link bg-dark menu-text" to="/sentiment">
                       Sentiment Analysis
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="nav-link bg-dark text-warning" to="/similar">
+                    <NavLink className="nav-link bg-dark menu-text" to="/similar">
                       Similar words
                     </NavLink>
                   </li>
@@ -86,13 +86,13 @@ export default function Navbar() {
                 </ul>
               </li>
               <li className="nav-item bg-dark">
-                <a className="nav-link text-warning" href="/#aboutUs">
+                <a className="nav-link menu-text" href="/#aboutUs">
                   About us
                 </a>
               </li>
               <li className="nav-item  bg-dark">
                 <a
-                  className="nav-link text-warning"
+                  className="nav-link menu-text"
                   href="/#testimonials"
                   tabIndex="-1"
                   aria-disabled="true"
@@ -102,13 +102,13 @@ export default function Navbar() {
               </li>
 
  <li>
-                    <a className="nav-link bg-dark text-warning" href="/#contributors">
+                    <a className="nav-link bg-dark menu-text" href="/#contributors">
                       Contributors
                     </a>
                   </li>
               <li className="nav-item dropdown ">
                 <label
-                  className="nav-link dropdown-toggle  text-warning"
+                  className="nav-link dropdown-toggle  menu-text"
                   id="navbarScrollingDropdown"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -117,17 +117,17 @@ export default function Navbar() {
                   Developers
                 </label>
                 <ul
-                  className="dropdown-menu bg-dark  text-warning"
+                  className="dropdown-menu bg-dark  menu-text"
                   aria-labelledby="navbarScrollingDropdown"
                 >                 
                   <li>
-                    <a className="nav-link bg-dark text-warning" href="https://pypi.org/project/yarub/">
+                    <a className="nav-link bg-dark menu-text" href="https://pypi.org/project/yarub/">
                       Yarub dataset
                     </a>
                   </li>
 
                   <li>
-                    <NavLink className="nav-link bg-dark text-warning" to="#">
+                    <NavLink className="nav-link bg-dark menu-text" to="#">
                       Yarub module
                     </NavLink>
                   </li>

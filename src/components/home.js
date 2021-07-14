@@ -44,25 +44,15 @@ export default function Home() {
                 aria-current="true"
                 aria-label="Slide 1"
               ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              {/* <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button> */}
-              <CarouselButton index={"1"} slideName={"Slide 2"} />
-              <CarouselButton index={"2"} slideName={"Slide 3"} />
-              <CarouselButton index={"3"} slideName={"Slide 4"} />
-              <CarouselButton index={"4"} slideName={"Slide 5"} />
-              <CarouselButton index={"5"} slideName={"Slide 6"} />
-              <CarouselButton index={"6"} slideName={"Slide 7"} />
-              <CarouselButton index={"7"} slideName={"Slide 8"} />
+              <CarouselButton index={"0"} slideName={"Slide 1"} className="active" aria-current="true"/>
+              <CarouselButton index={"1"} slideName={"Slide 2"} className="" aria-current="false"/>
+              <CarouselButton index={"2"} slideName={"Slide 3"} className="" aria-current="false"/>
+              <CarouselButton index={"3"} slideName={"Slide 4"} className="" aria-current="false"/>
+              <CarouselButton index={"4"} slideName={"Slide 5"} className="" aria-current="false"/>
+              <CarouselButton index={"5"} slideName={"Slide 6"} className="" aria-current="false"/>
+              <CarouselButton index={"6"} slideName={"Slide 7"} className="" aria-current="false"/>
+              <CarouselButton index={"7"} slideName={"Slide 8"} className="" aria-current="false"/>
+              <CarouselButton index={"8"} slideName={"Slide 9"} className="" aria-current="false"/>
             </div>
 
             <h1 className="text-start ">Tasks</h1>
@@ -142,6 +132,17 @@ export default function Home() {
                 {/* =============================== */}
               </div>
               <div className="carousel-item">
+                <Card
+                  title={"Dialect Identification"}
+                  imagePath={"images/morph.png"}
+                  description={
+                    "Applies morphological analysis to a given text"
+                  }
+                  path={"/morph"}
+                />
+            </div>
+
+              <div className="carousel-item">
                 {/* =============================== */}
                 <Card
                   imagePath={"images/similar.jpeg"}
@@ -151,6 +152,7 @@ export default function Home() {
                 />
                 {/* =============================== */}
               </div>
+              
             </div>
             <button
               className="carousel-control-prev"

@@ -11,7 +11,7 @@ export default class Sentiment extends Component {
       <h1 className="text-start my-2">{this.props.name}</h1>
       <div className="border-1 col-12 mx-auto container">
       <h6 className="text-start form-label my-3" htmlFor='select' >Model Selection</h6>
-      <select className="form-control" defaultValue={this.state.model} onChange={(e)=>this.modelChange(e)}>
+      <select className="form-control bg-dark menu-text" defaultValue={this.state.model} onChange={(e)=>this.modelChange(e)}>
         <option value="alkholi">Al-Kholi</option>
         <option value="arabert">ARaBERT</option>
         <option value="lstm">LSTM</option>

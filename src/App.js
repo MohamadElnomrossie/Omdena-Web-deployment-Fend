@@ -1,6 +1,5 @@
 import './App.css';
 import React, {Component} from 'react';
-import Input from "./components/taskComponent"
 import Navbar from "./components/navbar"
 import {Redirect, Route,Switch } from "react-router-dom";
 import Sentiment from './components/sentiment'
@@ -11,11 +10,11 @@ import LEM from "./components/lemma"
 import Tokenization from "./components/tokenization"
 import Similar from "./components/similarWords"
 import Home from "./components/home"
-
+import Morph from "./components/morph"
 
 class App extends Component {
   state={sentiment:{'positive':0,'mixed':0,'negative':0},
-  NER:{"man":"nadasd","dsds":"OOS"},
+  NER:{},
 POS:{"man":"nadasd","dsds":"OOS"},
 Dialect:{'BINARY':1, 'COUNTRY':'Egypt', 'REGION':'Egypt'},
 LEM:{"dsdasd":"dsadsd"},
@@ -26,7 +25,7 @@ Similar:{}}
   handleTasks=(name,input,model='alkholi')=>{
     const sentimentModels=['alkholi','lstm','arabert']
     const similarityModels=['aravec','word2vec']
-    if (name==='sent'){
+    if (name==='sent' & sentimentModels.includes(model) ){
      
       this.get_sentiment(input,model)
     }
@@ -131,10 +130,10 @@ Similar:{}}
       scores['LABEL_1']=data.result['output'][0][1]['score']
       scores['LABEL_2']=data.result['output'][0][2]['score']
       
-        console.log(scores)
+      
         // scores[Object.keys(data.result['output'][0][x])[0]]=scores[Object.keys(data.result['output'][0][x])[1]]
         
-        console.log(scores)
+    
         this.setState({sentiment:{
           "positive":scores['LABEL_2'],
           "negative":scores['LABEL_1'],
@@ -208,6 +207,12 @@ Similar:{}}
         <Route  path="/similar"  render={()=>(<Similar
          name={'Similar Words'}
           task={'sim'}
+          output={this.state.Similar}
+        handleTasks={this.handleTasks}/>)}/>
+        {/* ====================================== */}
+        <Route  path="/morph"  render={()=>(<Morph
+         name={'Morphological Analysis'}
+          task={'morph'}
           output={this.state.Similar}
         handleTasks={this.handleTasks}/>)}/>
         <Route path="/" exact render={()=>(<Home/>)}/>

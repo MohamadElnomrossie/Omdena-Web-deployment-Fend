@@ -13,7 +13,7 @@ export default class Similar extends Component {
             <h1 className="text-start my-2">{this.props.name}</h1>
             <div className="border-1 col-12 mx-auto container">
             <h6 className="text-start form-label my-3" htmlFor='select' >Model Selection</h6>
-            <select className="form-control" defaultValue={this.state.model} onChange={(e)=>this.modelChange(e)}>
+            <select className="form-control bg-dark menu-text" defaultValue={this.state.model} onChange={(e)=>this.modelChange(e)}>
               <option value="aravec">Aravec</option>
               <option value="word2vec">Word2Vec</option>
             </select>

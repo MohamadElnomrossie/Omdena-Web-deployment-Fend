@@ -3,7 +3,7 @@ import React from 'react'
 export default function Table(props) {
     const entries=Object.entries(props.output)
     return (
-        <div>
+        <div className=' mb-5'>
             <table className="table">
         <thead>
           <tr>

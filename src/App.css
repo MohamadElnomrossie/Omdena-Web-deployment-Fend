@@ -27,9 +27,6 @@ src:url('fonts/IndieFlower-Regular.ttf')
   font-size: calc(10px + 2vmin);
   color: white;
 }
-/* .sss{
-  height: 400;
-} */
 
 .App-link {
   color: #61dafb;
@@ -46,6 +43,7 @@ src:url('fonts/IndieFlower-Regular.ttf')
 
 .main-background{
   background-image: url("images/bg-main.jpg");
+  padding-bottom: 50px;
 
 }
 
@@ -84,7 +82,7 @@ Link h5{
 }
 
 .menu-text{
-  color:#BDA575
+  color:#BDA575 !important;
 }
 
 .test-font-title{
@@ -98,4 +96,7 @@ Link h5{
   border: 0;
   border-top: 3px solid #000;
   color:#000
+}
+.input-text{
+  background-color:#BDA575 !important;
 }
