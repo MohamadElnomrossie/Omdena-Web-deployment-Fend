@@ -65,7 +65,9 @@ Link h5{
 }
 .about{
   text-align: justify;
-  /* text-justify: inter-word; */
+  /* text-justify: distribute; */
+ 
+  word-break: break-all;
   
 }
 

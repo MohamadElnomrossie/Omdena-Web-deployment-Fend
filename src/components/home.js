@@ -8,8 +8,8 @@ export default function Home() {
       <div className="container justify-content-center">
         <div id="aboutUs">
           <h1 className="text-start">About Yarub</h1>
-          <p className="fs-4 about">
-            Yarub, "يعرب" is an Arabic word meaning to be an Arab. Yarub is an
+          <p className="fs-4  about" width="80">
+            Yarub, "يعرب" is an Arabic word meaning to be fluent in Arabic. Yarub is an
             open source natural language processing, NLP, toolkit. It was
             initiated by Omdena to build tools to utilize artificial
             intelligence to process the Arabic language. Yarub was built through
@@ -133,7 +133,7 @@ export default function Home() {
               </div>
               <div className="carousel-item">
                 <Card
-                  title={"Dialect Identification"}
+                  title={"Morphological Analysis"}
                   imagePath={"images/morph.png"}
                   description={
                     "Applies morphological analysis to a given text"
