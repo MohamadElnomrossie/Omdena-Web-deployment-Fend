@@ -53,6 +53,12 @@ export default function Navbar() {
                       Lemmatization
                     </NavLink>
                   </li>
+
+                  <li>
+                    <NavLink className="nav-link bg-dark  menu-text" to="/morph">
+                      Morphological analysis
+                    </NavLink>
+                  </li>
                   
                   <li>
                     <NavLink className="nav-link bg-dark menu-text" to="/ner">

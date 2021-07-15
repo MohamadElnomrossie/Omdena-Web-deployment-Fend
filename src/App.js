@@ -21,26 +21,7 @@ LEM:{},
 token:[],
 // ==========================================
 Similar:{},
-morph:{'أحمد': {'Tokenization': 'احمد', 'Lemmatization': 'أحمد', 'Gender': 'أحمد', 'POS': 'أحمد', 'Similars': 'أحمد', 'Diactrization': 'أحمد'}, 
-'خالد': {'Tokenization': 'خالد', 'Lemmatization': 'خالد', 'Gender': 'خالد', 'POS': 'خالد', 'Similars': 'خالد', 'Diactrization': 'خالد'}, 
-'توفيق': {'Tokenization': 'توفيق', 'Lemmatization': 'توفيق', 'Gender': 'توفيق', 'POS': 'توفيق', 'Similars': 'توفيق', 'Diactrization': 'توفيق'}, 
-'في': {'Tokenization': 'في', 'Lemmatization': 'في', 'Gender': 'في', 'POS': 'في', 'Similars': 'في', 'Diactrization': 'في'}, 
-'رواية': {'Tokenization': 'رواية', 'Lemmatization': 'رواي', 'Gender': 'رواية', 'POS': 'رواية', 'Similars': 'رواية', 'Diactrization': 'رواية'}, 
-'«': {'Tokenization': '«', 'Lemmatization': '«', 'Gender': '«', 'POS': '«', 'Similars': '«', 'Diactrization': '«'}, 
-'جمهورية': {'Tokenization': 'جمهورية', 'Lemmatization': 'جمهوري', 'Gender': 'جمهورية', 'POS': 'جمهورية', 'Similars': 'جمهورية', 'Diactrization': 'جمهورية'}, 
-'كأن': {'Tokenization': 'كان', 'Lemmatization': 'أن', 'Gender': 'كأن', 'POS': 'كأن', 'Similars': 'كأن', 'Diactrization': 'كأن'}, 
-'»': {'Tokenization': '»', 'Lemmatization': '»', 'Gender': '»', 'POS': '»', 'Similars': '»', 'Diactrization': '»'}, 
-'للروائي': {'Tokenization': 'للر+وايي', 'Lemmatization': 'روائي', 'Gender': 'للروائي', 'POS': 'للروائي', 'Similars': 'للروائي', 'Diactrization': 'للروائي'}, 
-'علاء': {'Tokenization': 'علاء', 'Lemmatization': 'علاء', 'Gender': 'علاء', 'POS': 'علاء', 'Similars': 'علاء', 'Diactrization': 'علاء'}, 
-'الأسواني': {'Tokenization': 'الاس+واني', 'Lemmatization': 'أسواني', 'Gender': 'الأسواني', 'POS': 'الأسواني', 'Similars': 'الأسواني', 'Diactrization': 'الأسواني'}, 
-'،': {'Tokenization': '،', 'Lemmatization': '،', 'Gender': '،', 'POS': '،', 'Similars': '،', 'Diactrization': '،'}, 
-'المشروع': {'Tokenization': 'المشروع', 'Lemmatization': 'مشروع', 'Gender': 'المشروع', 'POS': 'المشروع', 'Similars': 'المشروع', 'Diactrization': 'المشروع'}, 
-'الذي': {'Tokenization': 'الذي', 'Lemmatization': 'الذي', 'Gender': 'الذي', 'POS': 'الذي', 'Similars': 'الذي', 'Diactrization': 'الذي'}, 
-'ظل': {'Tokenization': 'ظل', 'Lemmatization': 'ظل', 'Gender': 'ظل', 'POS': 'ظل', 'Similars': 'ظل', 'Diactrization': 'ظل'}, 
-'يتحدث': {'Tokenization': 'يتحدث', 'Lemmatization': 'يتحدث', 'Gender': 'يتحدث', 'POS': 'يتحدث', 'Similars': 'يتحدث', 'Diactrization': 'يتحدث'}, 
-'ولم': {'Tokenization': 'ولم', 'Lemmatization': 'لم', 'Gender': 'ولم', 'POS': 'ولم', 'Similars': 'ولم', 'Diactrization': 'ولم'}, 
-'يفارق': {'Tokenization': 'يف+ارق', 'Lemmatization': 'يفارق', 'Gender': 'يفارق', 'POS': 'يفارق', 'Similars': 'يفارق', 'Diactrization': 'يفارق'},
- 'ذهنه': {'Tokenization': 'ذهن+ه', 'Lemmatization': 'ذهن', 'Gender': 'ذهنه', 'POS': 'ذهنه', 'Similars': 'ذهنه', 'Diactrization': 'ذهنه'}}}
+morph:{}}
 // ==========================================
 
   handleTasks=(name,input,model='alkholi')=>{

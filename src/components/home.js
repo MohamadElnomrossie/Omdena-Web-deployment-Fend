@@ -3,6 +3,18 @@ import Card from "./card";
 import CarouselButton from "./carouselButton";
 import Testimonials from "./testimonials";
 export default function Home() {
+  const contributors=["https://github.com/MohamadElnomrossie",
+  'https://github.com/eslamasaleh',
+  "https://github.com/suriya-it19",
+  "https://github.com/Mohamed-Harby",
+  "https://github.com/omarnabil1998",
+  "https://github.com/kush1920",
+  "https://github.com/Mu-Magdy",
+  "https://github.com/mohamedeng",
+  "https://github.com/shaymaa-abdelaziz",
+  "https://github.com/messi313"
+
+]
   return (
     <div className="container-fluid p-5">
       <div className="container justify-content-center">
@@ -178,7 +190,7 @@ export default function Home() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
+        {/* </div>
         <hr className="line"></hr>
         <div className="mx-auto my-3">
           <h1 className="text-start">Testimonials</h1>
@@ -224,20 +236,17 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         <hr className="line"></hr>
         <h1 className="text-start  my-3">Contributors</h1>
         <div className="mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 pt-3" id='contributors'>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
-                <img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src="images/avatar.jpg" alt='avatar'></img>
+               {contributors.map((contrib)=>{
+                 return(
+                  <a href={contrib}><img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src={contrib+".png"} alt='avatar'></img></a>
+                 )
+               })}
+                
+               
                 
                 
         </div>
