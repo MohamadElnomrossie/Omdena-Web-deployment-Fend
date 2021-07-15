@@ -190,7 +190,7 @@ export default function Home() {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-        {/* </div>
+        </div>
         <hr className="line"></hr>
         <div className="mx-auto my-3">
           <h1 className="text-start">Testimonials</h1>
@@ -215,34 +215,17 @@ export default function Home() {
                   "Some quick example text to build on the card title and make up the bulk of the card's content."
                 }
                 author={"Mark"}
-              /><Testimonials
-                imagePath={"images/avatar.jpg"}
-                title={
-                  "Some quick example text to build on the card title and make up the bulk of the card's content."
-                }
-                author={"Mark"}
-              /><Testimonials
-                imagePath={"images/avatar.jpg"}
-                title={
-                  "Some quick example text to build on the card title and make up the bulk of the card's content."
-                }
-                author={"Mark"}
-              /><Testimonials
-                imagePath={"images/avatar.jpg"}
-                title={
-                  "Some quick example text to build on the card title and make up the bulk of the card's content."
-                }
-                author={"Mark"}
               />
             </div>
           </div>
-        </div> */}
+        </div>
         <hr className="line"></hr>
         <h1 className="text-start  my-3">Contributors</h1>
         <div className="mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 pt-3" id='contributors'>
                {contributors.map((contrib)=>{
+ 
                  return(
-                  <a href={contrib}><img className="avatar m-2" data-bs-toggle="tooltip" title="Contributor" data-bs-placement="top" src={contrib+".png"} alt='avatar'></img></a>
+                  <a href={contrib}><img className="avatar m-2" data-bs-toggle="tooltip" title={contrib.split("/")[3]} data-bs-placement="top" src={contrib+".png"} alt='avatar'></img></a>
                  )
                })}
                 
