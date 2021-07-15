@@ -15,13 +15,34 @@ import Morph from "./components/morph"
 class App extends Component {
   state={sentiment:{'positive':0,'mixed':0,'negative':0},
   NER:{},
-POS:{"man":"nadasd","dsds":"OOS"},
-Dialect:{'BINARY':1, 'COUNTRY':'Egypt', 'REGION':'Egypt'},
-LEM:{"dsdasd":"dsadsd"},
+POS:{},
+Dialect:{},
+LEM:{},
 token:[],
 // ==========================================
-Similar:{}}
+Similar:{},
+morph:{'أحمد': {'Tokenization': 'احمد', 'Lemmatization': 'أحمد', 'Gender': 'أحمد', 'POS': 'أحمد', 'Similars': 'أحمد', 'Diactrization': 'أحمد'}, 
+'خالد': {'Tokenization': 'خالد', 'Lemmatization': 'خالد', 'Gender': 'خالد', 'POS': 'خالد', 'Similars': 'خالد', 'Diactrization': 'خالد'}, 
+'توفيق': {'Tokenization': 'توفيق', 'Lemmatization': 'توفيق', 'Gender': 'توفيق', 'POS': 'توفيق', 'Similars': 'توفيق', 'Diactrization': 'توفيق'}, 
+'في': {'Tokenization': 'في', 'Lemmatization': 'في', 'Gender': 'في', 'POS': 'في', 'Similars': 'في', 'Diactrization': 'في'}, 
+'رواية': {'Tokenization': 'رواية', 'Lemmatization': 'رواي', 'Gender': 'رواية', 'POS': 'رواية', 'Similars': 'رواية', 'Diactrization': 'رواية'}, 
+'«': {'Tokenization': '«', 'Lemmatization': '«', 'Gender': '«', 'POS': '«', 'Similars': '«', 'Diactrization': '«'}, 
+'جمهورية': {'Tokenization': 'جمهورية', 'Lemmatization': 'جمهوري', 'Gender': 'جمهورية', 'POS': 'جمهورية', 'Similars': 'جمهورية', 'Diactrization': 'جمهورية'}, 
+'كأن': {'Tokenization': 'كان', 'Lemmatization': 'أن', 'Gender': 'كأن', 'POS': 'كأن', 'Similars': 'كأن', 'Diactrization': 'كأن'}, 
+'»': {'Tokenization': '»', 'Lemmatization': '»', 'Gender': '»', 'POS': '»', 'Similars': '»', 'Diactrization': '»'}, 
+'للروائي': {'Tokenization': 'للر+وايي', 'Lemmatization': 'روائي', 'Gender': 'للروائي', 'POS': 'للروائي', 'Similars': 'للروائي', 'Diactrization': 'للروائي'}, 
+'علاء': {'Tokenization': 'علاء', 'Lemmatization': 'علاء', 'Gender': 'علاء', 'POS': 'علاء', 'Similars': 'علاء', 'Diactrization': 'علاء'}, 
+'الأسواني': {'Tokenization': 'الاس+واني', 'Lemmatization': 'أسواني', 'Gender': 'الأسواني', 'POS': 'الأسواني', 'Similars': 'الأسواني', 'Diactrization': 'الأسواني'}, 
+'،': {'Tokenization': '،', 'Lemmatization': '،', 'Gender': '،', 'POS': '،', 'Similars': '،', 'Diactrization': '،'}, 
+'المشروع': {'Tokenization': 'المشروع', 'Lemmatization': 'مشروع', 'Gender': 'المشروع', 'POS': 'المشروع', 'Similars': 'المشروع', 'Diactrization': 'المشروع'}, 
+'الذي': {'Tokenization': 'الذي', 'Lemmatization': 'الذي', 'Gender': 'الذي', 'POS': 'الذي', 'Similars': 'الذي', 'Diactrization': 'الذي'}, 
+'ظل': {'Tokenization': 'ظل', 'Lemmatization': 'ظل', 'Gender': 'ظل', 'POS': 'ظل', 'Similars': 'ظل', 'Diactrization': 'ظل'}, 
+'يتحدث': {'Tokenization': 'يتحدث', 'Lemmatization': 'يتحدث', 'Gender': 'يتحدث', 'POS': 'يتحدث', 'Similars': 'يتحدث', 'Diactrization': 'يتحدث'}, 
+'ولم': {'Tokenization': 'ولم', 'Lemmatization': 'لم', 'Gender': 'ولم', 'POS': 'ولم', 'Similars': 'ولم', 'Diactrization': 'ولم'}, 
+'يفارق': {'Tokenization': 'يف+ارق', 'Lemmatization': 'يفارق', 'Gender': 'يفارق', 'POS': 'يفارق', 'Similars': 'يفارق', 'Diactrization': 'يفارق'},
+ 'ذهنه': {'Tokenization': 'ذهن+ه', 'Lemmatization': 'ذهن', 'Gender': 'ذهنه', 'POS': 'ذهنه', 'Similars': 'ذهنه', 'Diactrization': 'ذهنه'}}}
 // ==========================================
+
   handleTasks=(name,input,model='alkholi')=>{
     const sentimentModels=['alkholi','lstm','arabert']
     const similarityModels=['aravec','word2vec']
@@ -46,6 +67,9 @@ Similar:{}}
     }
     else if(name==='sim'&& similarityModels.includes(model)){
       this.sim(input,model)
+    }
+    else if(name==='morph'){
+      this.get_morph(input)
     }
     else{
       return
@@ -161,7 +185,20 @@ Similar:{}}
    }
   }
 
+get_morph=async(text)=>{
+  try{
+    this.setState({morph:{}})
+    const url=process.env.REACT_APP_URL+'/morpho'
+    const output=await fetch(url,{method:"POST",mode: 'cors',headers: {'Content-Type': 'application/json'},body: JSON.stringify({ 'text':text })})//,this.requestOptions(text))
+    var data = await output.json();
+      this.setState({morph:data.result['output']})
+  }
+  catch(e){
+    console.log(e)
+  }
+}
   render(){
+
     return (
       <div className="App main-background">
         <header className='container-fluid px-0'>
@@ -213,8 +250,9 @@ Similar:{}}
         <Route  path="/morph"  render={()=>(<Morph
          name={'Morphological Analysis'}
           task={'morph'}
-          output={this.state.Similar}
+          output={this.state.morph}
         handleTasks={this.handleTasks}/>)}/>
+        {/* ====================================== */}
         <Route path="/" exact render={()=>(<Home/>)}/>
         <Redirect to="/"/>
         </Switch>

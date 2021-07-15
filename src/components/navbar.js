@@ -5,7 +5,7 @@ export default function Navbar() {
     <div className="sticky-top">
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <h3 className="navbar-brand  menu-text">Yarub</h3>
+          <NavLink className="nav-link bg-dark menu-text" to="/"><h3 className="navbar-brand  menu-text">Yarub</h3></NavLink>
           <button
             className="navbar-toggler"
             type="button"

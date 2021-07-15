@@ -52,7 +52,6 @@ export default function Home() {
               <CarouselButton index={"5"} slideName={"Slide 6"} className="" aria-current="false"/>
               <CarouselButton index={"6"} slideName={"Slide 7"} className="" aria-current="false"/>
               <CarouselButton index={"7"} slideName={"Slide 8"} className="" aria-current="false"/>
-              <CarouselButton index={"8"} slideName={"Slide 9"} className="" aria-current="false"/>
             </div>
 
             <h1 className="text-start ">Tasks</h1>
@@ -78,16 +77,16 @@ export default function Home() {
                 />
                 {/* =============================================== */}
               </div>
-              <div className="carousel-item">
                 {/* =============================== */}
+              {/* <div className="carousel-item">
                 <Card
                   imagePath={"images/gender4.png"}
                   path="/gender"
                   title="Gender Identification"
                   description="Gender identification of the Arabic words and texts"
                 />
+              </div> */}
                 {/* =============================== */}
-              </div>
 
               {/* ========================================================== */}
               <div className="carousel-item">

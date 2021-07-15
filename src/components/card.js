@@ -20,9 +20,9 @@ export default function Card(props) {
                     </div>
                     <div className="">
                       <div className="card-body">
-                        <p className="card-text card-text-edited text-center fs-4">
+                        {/* <p className="card-text card-text-edited text-center fs-4">
                         {props.description}
-                        </p>
+                        </p> */}
                        
                       </div>
                     </div>
