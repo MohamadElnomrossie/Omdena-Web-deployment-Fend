@@ -26,23 +26,40 @@ export default function MorphAccordion(props) {
               </button>
             </h2>
             <div
-              id={key+"Id"}
-              className="accordion-collapse collapse menu-text"
+              id={key}
+              className="accordion-collapse collapse input-text"
               aria-labelledby="flush-headingOne"
               data-bs-parent="#accordionFlushExample"
               key={key+"Div"}
             >
-              <table className="table menu-text" key={key + "Table"}>
+              <table className="table" key={key + "Table"}>
                 <tbody key={key+"Tbody"}>
                   {Object.entries(props.output[key]).map((entry) => {
-                    return (
+          
+                    if (entry[0]!=='Diacritization')
+                    if (entry[0]!=='Similars')
+                    {return (
                       <tr key={entry[0]}>
-                        <td key={entry + "Cell"} className="col-6">
+                        <td key={entry + "ce"} className="col-6">
                           {entry[0]}
                         </td>
                         <td key={entry[1]}>{entry[1]}</td>
                       </tr>
-                    );
+                    )
+                    }
+                    else{
+                      return(<td></td>)
+                    }
+                  })}
+                <tr>
+                  <td colSpan="2"className="col-12">Diacritization</td>
+                </tr>
+                  {props.output[key]['Diacritization'].map((word)=>{
+                   return( 
+                     <tr>
+                          <td colSpan="5" key={word}>{word!=="Nan"?word:""}</td>
+                      </tr>
+                            )
                   })}
                 </tbody>
               </table>
