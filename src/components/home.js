@@ -12,7 +12,21 @@ export default function Home() {
   "https://github.com/Mu-Magdy",
   "https://github.com/mohamedeng",
   "https://github.com/shaymaa-abdelaziz",
-  "https://github.com/messi313"
+  "https://github.com/messi313",
+  "https://github.com/Mu-Magdy",
+  "https://github.com/AhmedEssam19",
+  "https://github.com/rematchka",
+  "https://github.com/ahmedSalah-11",
+  "https://github.com/santarabantoosoo",
+  "https://github.com/olagalal",
+  "https://github.com/MichaelMansour256",
+  "https://github.com/ayman-metwally2020",
+  "https://github.com/ElSayedMMostafa",
+  "https://github.com/EmanElrefai",
+  "https://github.com/Lujain-Kotb",
+  "https://github.com/salmaabdelhalim",
+  "https://github.com/mmi333",
+
 
 ]
   return (
@@ -221,7 +235,7 @@ export default function Home() {
         </div>
         <hr className="line"></hr>
         <h1 className="text-start  my-3">Contributors</h1>
-        <div className="mx-auto col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12 pt-3" id='contributors'>
+        <div className="mx-auto col-xxl-8 col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12 pt-3" id='contributors'>
                {contributors.map((contrib)=>{
  
                  return(

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
  class Input extends Component {
-     state={input:""}
+     state={input:'. أحمد خالد توفيق في رواية «جمهورية كأن» للروائي علاء الأسواني، المشروع الذي ظل يتحدث ولم يفارق ذهنه'}
      onChange=(e)=>{
          this.setState({input:e.target.value})
      }
